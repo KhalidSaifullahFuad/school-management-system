@@ -6,13 +6,13 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = {"com.cordial.service"})
+@ComponentScan(basePackages = {"com.cordial.service", "com.cordial.dao"})
 public class RootConfig {
 
-    @Bean
-    public Student studentDetails() {
-        return new Student();
-    }
+//    @Bean
+//    public Student studentDetails() {
+//        return new Student();
+//    }
 
 }
 

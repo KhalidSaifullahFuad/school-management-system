@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = {"com.cordial.service", "com.cordial.dao"})
 public class RootConfig {
 
-//    @Bean
-//    public Student studentDetails() {
-//        return new Student();
-//    }
+    @Bean
+    public Student studentDetails() {
+        return new Student();
+    }
 
 }
 

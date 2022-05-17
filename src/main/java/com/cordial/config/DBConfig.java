@@ -16,7 +16,7 @@ public class DBConfig {
     @Autowired
     private ApplicationContext context;
 
-    @Bean
+    @Bean("sessionFactory")
     @Qualifier("sessionFactory")
     public LocalSessionFactoryBean getSessionFactory(){
         LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();

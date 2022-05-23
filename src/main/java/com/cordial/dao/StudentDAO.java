@@ -1,15 +1,17 @@
 package com.cordial.dao;
 
 import com.cordial.model.Student;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
-@Component
+@Service
 @Transactional
 public class StudentDAO {
 
@@ -18,7 +20,7 @@ public class StudentDAO {
 
     public String insert(Student student) {
         String id = null;
-        var session = sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
 
         try {
             Long longId = (Long) session.save(student);
@@ -34,7 +36,7 @@ public class StudentDAO {
 
     public List<Student> getAll(){
         var session = sessionFactory.getCurrentSession();
-        String hqlQuery = "SELECT s FROM Student s";
+        String hqlQuery = "FROM Student";
 
         Query query = sessionFactory.getCurrentSession().createQuery(hqlQuery, Student.class);
         List<Student> studentList = query.list();

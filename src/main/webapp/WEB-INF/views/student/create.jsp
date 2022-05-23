@@ -13,7 +13,7 @@
 <html>
 <head>
     <title>${title}</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.css">
 </head>
 <body>
     <%--@elvariable id="student" type="com.cordial.model.Student"--%>

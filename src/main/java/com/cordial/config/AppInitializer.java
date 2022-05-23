@@ -16,7 +16,7 @@ public class AppInitializer implements WebApplicationInitializer {
 
         // root config
         AnnotationConfigWebApplicationContext rootConfig = new AnnotationConfigWebApplicationContext();
-        rootConfig.register(RootConfig.class, DBConfig.class);
+        rootConfig.register(DBConfig.class);
         rootConfig.refresh();
         servletContext.addListener(new ContextLoaderListener(rootConfig));
 

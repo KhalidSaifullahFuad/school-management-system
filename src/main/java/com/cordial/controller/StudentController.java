@@ -50,7 +50,7 @@ public class StudentController {
     public String maintain(Model model) {
 
         List<Student> studentList = studentDAO.getAll();
-        model.addAttribute("studentLista", studentList);
+        model.addAttribute("studentList", studentList);
 
         return "student/maintain";
     }
